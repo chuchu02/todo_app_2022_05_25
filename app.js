@@ -4,7 +4,12 @@ import cors from "cors";
 
 const app = express();
 
-app.use(cors());
+
+const corsOptions = {
+  origin : "https://cdpn.io",
+  optionsSuccessStatus: 200
+}
+app.use(cors(corsOptions));
 app.use(express.json());
 
 const appPort = 3000;
